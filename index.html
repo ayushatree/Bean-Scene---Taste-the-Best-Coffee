@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Scene - Taste the Best Coffee</title>
+    <link rel="icon" href="./assets/coffee-cup 1.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D28F4B',    // Your main accent orange-brown
+                        secondary: '#4A2B1D',  // Your dark brown for text/elements/backgrounds
+                        tertiary: '#F6EFE9',   // Your light background for sections
+                        darkest: '#331C12',    // Your even darker brown for footer/subscribe
+                    },
+                    fontFamily: {
+                        display: ['"Playfair Display"', 'serif'], // For section headings
+                        script: ['"Great Vibes"', 'cursive'],     // For "Coffee" and "Bean Scene"
+                        body: ['Arial', 'sans-serif'],           // General body text fallback
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /*
+        Optional: Any highly specific custom CSS not easily handled by Tailwind utilities,
+        or for fine-tuning that can't be done with utility classes.
+        */
+    </style>
+</head>
+
+<body class="font-body text-gray-700 bg-white leading-relaxed">
+
+    <header
+        class="relative bg-secondary min-h-screen md:min-h-[823px] flex flex-col justify-between items-center text-white overflow-hidden">
+
+        <div class="absolute inset-0 bg-[url('./assets/coffee_image.png')] bg-cover bg-center bg-no-repeat z-0">
+
+            <div class="absolute inset-0 bg-black opacity-40"></div>
+        </div>
+
+
+
+        <nav class="relative z-10 w-full flex justify-between items-center px-4 md:px-12 py-6">
+
+            <a href="#"
+                class="text-2xl md:text-3xl font-script text-white hover:text-primary transition-colors duration-300">Bean
+                Scene</a>
+
+
+            <ul class="hidden md:flex space-x-8 text-lg font-medium">
+
+                <li><a href="#home" class="hover:text-primary transition-colors duration-300">Home</a></li>
+
+                <li><a href="#menu" class="hover:text-primary transition-colors duration-300">Menu</a></li>
+
+                <li><a href="#about" class="hover:text-primary transition-colors duration-300">About Us</a></li>
+
+                <li><a href="#contact" class="hover:text-primary transition-colors duration-300">Contact Us</a></li>
+
+            </ul>
+
+
+            <div class="hidden md:flex space-x-4">
+
+                <button
+                    class="px-6 py-2 border border-white text-white rounded-md hover:bg-white hover:text-secondary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white">Sign
+                    In</button>
+
+                <button
+                    class="px-6 py-2 bg-primary text-white rounded-md hover:bg-orange-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary">Sign
+                    Up</button>
+
+            </div>
+
+
+            <button id="mobile-menu-button" class="md:hidden text-white text-2xl focus:outline-none"
+                aria-label="Open mobile menu">
+
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+        </nav>
+
+
+
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-secondary bg-opacity-95 h-full flex flex-col items-center justify-center space-y-8 text-xl z-50 hidden md:hidden transition-opacity duration-300 ease-in-out opacity-0">
+
+            <button id="close-menu-button" class="absolute top-6 right-6 text-white text-3xl focus:outline-none"
+                aria-label="Close mobile menu">
+
+                <i class="fas fa-times"></i>
+
+            </button>
+
+            <a href="#home"
+                class="text-white hover:text-primary transition-colors duration-300 py-2 w-2/3 text-center border-b border-gray-700">Home</a>
+
+            <a href="#menu"
+                class="text-white hover:text-primary transition-colors duration-300 py-2 w-2/3 text-center border-b border-gray-700">Menu</a>
+
+            <a href="#about"
+                class="text-white hover:text-primary transition-colors duration-300 py-2 w-2/3 text-center border-b border-gray-700">About
+                Us</a>
+
+            <a href="#contact"
+                class="text-white hover:text-primary transition-colors duration-300 py-2 w-2/3 text-center">Contact
+                Us</a>
+
+            <button
+                class="px-8 py-3 border border-white text-white rounded-md hover:bg-white hover:text-secondary transition-colors duration-300 w-2/3 focus:outline-none focus:ring-2 focus:ring-white mt-8">Sign
+                In</button>
+
+            <button
+                class="px-8 py-3 bg-primary text-white rounded-md hover:bg-orange-600 transition-colors duration-300 w-2/3 focus:outline-none focus:ring-2 focus:ring-primary">Sign
+                Up</button>
+
+        </div>
+
+
+
+        <div
+            class="relative z-10 flex flex-col items-start w-full px-4 md:px-12 pb-24 md:pb-32 lg:pb-48 text-left max-w-7xl mx-auto">
+
+            <p class="text-white text-xl md:text-2xl mb-4 font-normal">We've got your morning covered with</p>
+
+            <h1 class="font-script text-white text-7xl md:text-8xl lg:text-9xl mb-6 leading-tight drop-shadow-lg">Coffee
+            </h1>
+
+            <p class="text-white text-lg md:text-xl max-w-2xl mb-8 font-light drop-shadow">It is best to start your day
+                with a cup of coffee. Discover the best flavours coffee you will ever have. We provide the best for our
+                customers.</p>
+
+            <button
+                class="px-8 py-3 bg-primary text-white rounded-md font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-primary">Order
+                Now</button>
+
+        </div>
+
+    </header>
+    <section id="about" class="py-16 md:py-24 bg-white text-center">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="font-display text-4xl md:text-5xl text-secondary mb-4">Discover the best coffee</h2>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-12">Bean Scene is a coffee shop that
+                provides you with quality coffee that helps boost your productivity and helps build your mood. Having a
+                cup of coffee is good, but having a cup of real coffee is greater. There is no doubt that you will enjoy
+                this coffee more than others you have ever tasted.</p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <div class="md:w-1/2 flex justify-center order-2 md:order-1">
+                    <button
+                        class="px-8 py-3 bg-primary text-white rounded-md font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-primary">Learn
+                        More</button>
+                </div>
+                <div class="md:w-1/2 flex justify-center order-1 md:order-2">
+                    <img src="./assets/stylized-cup-coffee-out-coffee-beans-flat-lay 1.png"
+                        alt="Coffee Beans forming a cup shape"
+                        class="max-w-xs md:max-w-sm lg:max-w-md w-full h-auto object-contain transition-transform duration-500 hover:scale-105">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-16 md:py-24 bg-tertiary text-center relative overflow-hidden">
+        <img src="./assets/coffee_blast.png" alt="Coffee splash graphic"
+            class="absolute top-0 left-0 w-32 md:w-48 lg:w-64 -translate-x-1/2 -translate-y-1/2 rotate-12 z-0 opacity-80">
+        <img src="./assets/coffee_blast (1).png" alt="Coffee splash graphic"
+            class="absolute top-0 right-0 w-32 md:w-48 lg:w-64 translate-x-1/2 -translate-y-1/2 -rotate-12 z-0 opacity-80">
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4">
+            <h2 class="font-display text-4xl md:text-5xl text-secondary mb-4">Enjoy a new blend of coffee style</h2>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-12">Explore all flavours of coffee with us.
+                There is always a new cup worth experiencing</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                    class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center group transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="./assets/Rectangle 7.png" alt="Delicious Cappuccino"
+                        class="w-full h-48 object-cover rounded-md mb-4 border border-gray-200">
+                    <h3 class="font-display text-2xl text-secondary mb-2">Cappuccino</h3>
+                    <p class="text-gray-600 text-sm mb-2">Coffee 50% | Milk 50%</p>
+                    <p class="font-bold text-primary text-2xl mb-4">$8.50</p>
+                    <button
+                        class="px-6 py-2 bg-primary text-white rounded-md font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-md w-full focus:outline-none focus:ring-2 focus:ring-primary">Order
+                        Now</button>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center group transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="./assets/Rectangle 9.png" alt="Warm Chai Latte"
+                        class="w-full h-48 object-cover rounded-md mb-4 border border-gray-200">
+                    <h3 class="font-display text-2xl text-secondary mb-2">Chai Latte</h3>
+                    <p class="text-gray-600 text-sm mb-2">Coffee 50% | Milk 50%</p>
+                    <p class="font-bold text-primary text-2xl mb-4">$8.50</p>
+                    <button
+                        class="px-6 py-2 bg-primary text-white rounded-md font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-md w-full focus:outline-none focus:ring-2 focus:ring-primary">Order
+                        Now</button>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center group transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="./assets/Rectangle 11.png" alt="Rich Macchiato"
+                        class="w-full h-48 object-cover rounded-md mb-4 border border-gray-200">
+                    <h3 class="font-display text-2xl text-secondary mb-2">Macchiato</h3>
+                    <p class="text-gray-600 text-sm mb-2">Coffee 50% | Milk 50%</p>
+                    <p class="font-bold text-primary text-2xl mb-4">$8.50</p>
+                    <button
+                        class="px-6 py-2 bg-primary text-white rounded-md font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-md w-full focus:outline-none focus:ring-2 focus:ring-primary">Order
+                        Now</button>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center group transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="./assets/Rectangle 13.png" alt="Strong Expresso"
+                        class="w-full h-48 object-cover rounded-md mb-4 border border-gray-200">
+                    <h3 class="font-display text-2xl text-secondary mb-2">Expresso</h3>
+                    <p class="text-gray-600 text-sm mb-2">Coffee 50% | Milk 50%</p>
+                    <p class="font-bold text-primary text-2xl mb-4">$8.50</p>
+                    <button
+                        class="px-6 py-2 bg-primary text-white rounded-md font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-md w-full focus:outline-none focus:ring-2 focus:ring-primary">Order
+                        Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-white text-center relative overflow-hidden">
+        
+
+        <div class="relative z-10 max-w-6xl mx-auto px-4">
+            <h2 class="font-display text-4xl md:text-5xl text-secondary mb-4">Why are we different?</h2>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-12">We don't just make your coffee, we make
+                your day!</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div
+                    class="bg-tertiary p-6 rounded-lg shadow-md flex flex-col items-center justify-center h-full group transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <i class="fas fa-seedling text-5xl text-primary mb-4 group-hover:scale-110 transition-transform duration-300"
+                        aria-hidden="true"></i>
+                    <h3 class="font-display text-2xl text-secondary mb-2">Supreme Beans</h3>
+                    <p class="text-gray-600 text-center text-sm">Beans that provides great taste</p>
+                </div>
+                <div
+                    class="bg-tertiary p-6 rounded-lg shadow-md flex flex-col items-center justify-center h-full group transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <i class="fas fa-award text-5xl text-primary mb-4 group-hover:scale-110 transition-transform duration-300"
+                        aria-hidden="true"></i>
+                    <h3 class="font-display text-2xl text-secondary mb-2">High Quality</h3>
+                    <p class="text-gray-600 text-center text-sm">We provide the highest quality</p>
+                </div>
+                <div
+                    class="bg-tertiary p-6 rounded-lg shadow-md flex flex-col items-center justify-center h-full group transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <i class="fas fa-mug-hot text-5xl text-primary mb-4 group-hover:scale-110 transition-transform duration-300"
+                        aria-hidden="true"></i>
+                    <h3 class="font-display text-2xl text-secondary mb-2">Extraordinary</h3>
+                    <p class="text-gray-600 text-center text-sm">Coffee like you have never tasted</p>
+                </div>
+                <div
+                    class="bg-tertiary p-6 rounded-lg shadow-md flex flex-col items-center justify-center h-full group transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <i class="fas fa-dollar-sign text-5xl text-primary mb-4 group-hover:scale-110 transition-transform duration-300"
+                        aria-hidden="true"></i>
+                    <h3 class="font-display text-2xl text-secondary mb-2">Affordable Price</h3>
+                    <p class="text-gray-600 text-center text-sm">Our Coffee prices are easy to afford</p>
+                </div>
+            </div>
+
+            <p class="text-xl md:text-2xl text-gray-600 mb-6">Great ideas start with great coffee, Lets help you achieve
+                that</p>
+            <h3 class="font-display text-3xl md:text-4xl text-secondary mb-8">Get started today.</h3>
+            <button
+                class="px-8 py-3 bg-primary text-white rounded-md font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-primary">Join
+                Us</button>
+        </div>
+    </section>
+
+    <section class="relative py-16 md:py-24 flex items-center justify-center overflow-hidden min-h-[500px]">
+        <div class="absolute inset-0 bg-[url('./assets/Group46.png')] bg-cover bg-center bg-no-repeat bg-fixed z-0">
+            <div class="absolute inset-0 bg-secondary opacity-70"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-between w-full">
+            <div class="lg:w-1/2 text-left text-white mb-12 lg:mb-0">
+                <h2 class="font-display text-4xl md:text-5xl lg:text-6xl mb-4 leading-tight">Get a chance to have an
+                    <br><span class="text-primary">Amazing morning</span>
+                </h2>
+                <p class="text-lg md:text-xl mb-8 max-w-lg">We are giving you one time opportunity to experience a
+                    better life with coffee.</p>
+                <button
+                    class="px-8 py-3 bg-primary text-white rounded-md font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-primary">Order
+                    Now</button>
+            </div>
+            <div class="lg:w-1/2 flex justify-center lg:justify-end">
+                <img src="./assets/Group 61.png" alt="Large coffee cup mockup"
+                    class="w-64 md:w-80 lg:w-96 h-auto object-contain transition-transform duration-500 hover:scale-105">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-tertiary text-center relative overflow-hidden">
+        <img src="./assets/coffee_blast (1).png" alt="Coffee splash graphic"
+            class="absolute top-0 left-0 w-32 md:w-48 lg:w-64 -translate-x-1/2 -translate-y-1/2 rotate-12 z-0 opacity-80">
+        <img src="./assets/coffee_blast.png" alt="Coffee splash graphic"
+            class="absolute bottom-0 left-0 w-32 md:w-48 lg:w-64 -translate-x-1/2 translate-y-1/2 -rotate-12 z-0 opacity-80">
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4">
+            <h2 class="font-display text-4xl md:text-5xl text-secondary mb-4">Our coffee perfection feedback</h2>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-12">Our customers has amazing things to say
+                about us</p>
+
+            <div class="relative bg-white p-8 md:p-12 rounded-lg shadow-xl max-w-3xl mx-auto">
+                <div class="absolute top-0 left-0 text-primary text-8xl leading-none -mt-4 -ml-4 font-display">&ldquo;
+                </div>
+                <p class="text-gray-700 text-lg md:text-xl italic mb-8">Lorem Ipsum is simply dummy text of the printing
+                    and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                    1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                    essentially unchanged. It was popularised in the 1960s with the release of Letraset.....</p>
+                <div class="flex flex-col items-center">
+                    <img src="./assets/Rectangle 9 (1).png" alt="Profile picture of Jonny Thomas"
+                        class="w-20 h-20 rounded-full object-cover border-4 border-primary mb-4 shadow-md">
+                    <p class="font-bold text-secondary text-xl md:text-2xl">Jonny Thomas</p>
+                    <p class="text-gray-600 text-sm">Project Manager</p>
+                </div>
+
+                <button
+                    class="absolute top-1/2 left-4 -translate-y-1/2 bg-primary text-white rounded-full p-3 shadow-lg hover:bg-orange-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary"
+                    aria-label="Previous testimonial">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <button
+                    class="absolute top-1/2 right-4 -translate-y-1/2 bg-primary text-white rounded-full p-3 shadow-lg hover:bg-orange-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary"
+                    aria-label="Next testimonial">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-16 md:py-24 bg-darkest text-white text-center overflow-hidden">
+        <img src="./assets/pngwing 1.png" alt="Decorative coffee cup"
+            class="absolute bottom-0 left-0 w-48 md:w-64 lg:w-80 -translate-x-1/4 translate-y-1/4 z-0 opacity-70">
+        <img src="./assets/pngwing 2.png" alt="Decorative coffee cup"
+            class="absolute bottom-0 right-0 w-48 md:w-64 lg:w-80 translate-x-1/4 translate-y-1/4 z-0 opacity-70">
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4">
+            <h2 class="font-display text-4xl md:text-5xl text-white mb-4">Subscribe to get the Latest News</h2>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-12">Don't miss out on our latest news,
+                updates, tips and special offers</p>
+
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                <input type="email" placeholder="Enter your email address" aria-label="Email address for newsletter"
+                    class="w-full md:w-2/3 lg:w-1/2 px-6 py-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary text-gray-800 text-lg">
+                <button
+                    class="w-full md:w-auto px-8 py-4 bg-primary text-white rounded-md font-semibold hover:bg-orange-600 transition-colors duration-300 shadow-lg text-lg focus:outline-none focus:ring-2 focus:ring-primary">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-darkest text-white py-16 md:py-20 relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-[url('./assets/footer-beans.jpg')] bg-cover bg-center bg-no-repeat bg-fixed z-0 opacity-20">
+        </div>
+
+        <div
+            class="relative z-10 max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left">
+            <div>
+                <a href="#"
+                    class="text-3xl font-script text-white mb-6 block hover:text-primary transition-colors duration-300">Bean
+                    Scene</a>
+                <p class="text-gray-300 text-sm leading-relaxed mb-6">Lorem Ipsum is simply dummy text of the printing
+                    and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                    1500s.</p>
+                <div class="flex justify-center md:justify-start space-x-6 text-2xl">
+                    <a href="#" class="hover:text-primary transition-colors duration-300" aria-label="Facebook"><i
+                            class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" class="hover:text-primary transition-colors duration-300" aria-label="Twitter"><i
+                            class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#" class="hover:text-primary transition-colors duration-300" aria-label="Instagram"><i
+                            class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" class="hover:text-primary transition-colors duration-300" aria-label="YouTube"><i
+                            class="fab fa-youtube" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="font-display text-xl text-white mb-6">About Us</h3>
+                <ul class="space-y-3 text-gray-300">
+                    <li><a href="#" class="hover:text-primary transition-colors duration-300">Menu</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors duration-300">Features</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors duration-300">News & Blogs</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors duration-300">Help & Supports</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-display text-xl text-white mb-6">Company</h3>
+                <ul class="space-y-3 text-gray-300">
+                    <li><a href="#" class="hover:text-primary transition-colors duration-300">How we work</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors duration-300">Terms of service</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors duration-300">Pricing</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors duration-300">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-display text-xl text-white mb-6">Contact Us</h3>
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex items-start justify-center md:justify-start gap-3">
+                        <i class="fas fa-map-marker-alt text-primary mt-1" aria-hidden="true"></i> <span>Akshya Nagar
+                            1st Block 1st Cross, Rammurthy Nagar, Bangalore-560016</span>
+                    </li>
+                    <li class="flex items-center justify-center md:justify-start gap-3">
+                        <i class="fas fa-phone-alt text-primary" aria-hidden="true"></i>
+                        <a href="tel:+12029182132" class="hover:text-primary transition-colors duration-300">+1
+                            202-918-2132</a>
+                    </li>
+                    <li class="flex items-center justify-center md:justify-start gap-3">
+                        <i class="fas fa-envelope text-primary" aria-hidden="true"></i>
+                        <a href="mailto:ayushatre10@gmail.com"
+                            class="hover:text-primary transition-colors duration-300">ayushatre10@gmail.com</a>
+                    </li>
+                    <li class="flex items-center justify-center md:justify-start gap-3">
+                        <i class="fas fa-globe text-primary" aria-hidden="true"></i>
+                        <a href="http://www.beanscene.com" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-primary transition-colors duration-300">www.beanscene.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 Bean Scene. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMenuButton = document.getElementById('close-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu && closeMenuButton) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.remove('hidden');
+                    // Trigger fade-in effect for mobile menu
+                    setTimeout(() => {
+                        mobileMenu.classList.add('opacity-100');
+                    }, 10); // Small delay to allow 'hidden' to be removed first
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                });
+
+                closeMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.remove('opacity-100');
+                    // Hide menu after fade-out
+                    setTimeout(() => {
+                        mobileMenu.classList.add('hidden');
+                        document.body.style.overflow = ''; // Restore background scrolling
+                    }, 300); // Match transition duration
+                });
+
+                // Close menu when a navigation link is clicked
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.remove('opacity-100');
+                        setTimeout(() => {
+                            mobileMenu.classList.add('hidden');
+                            document.body.style.overflow = '';
+                        }, 300);
+                    });
+                });
+            }
+
+            // --- Advanced JavaScript for the Feedback Carousel (Requires more data and logic) ---
+            // This section is commented out as it requires a dataset and full carousel logic.
+            // For a client demo, the static display is often sufficient.
+            // If the client wants an interactive carousel, this is where you'd implement it
+            // using a library (like Swiper.js, Flickity) or custom JS.
+
+            /*
+            const feedbackItems = [
+                {
+                    quote: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset.....",
+                    author: "Jonny Thomas",
+                    role: "Project Manager",
+                    image: "./assets/Rectangle 9 (1).png"
+                },
+                {
+                    quote: "This coffee shop has transformed my mornings! The quality is unparalleled, and the staff are always so friendly. Highly recommend the Espresso!",
+                    author: "Alice Wonderland",
+                    role: "Coffee Enthusiast",
+                    image: "https://via.placeholder.com/60/FFD700/FFFFFF?text=A" // Placeholder for another image
+                },
+                {
+                    quote: "Bean Scene is my go-to place for meetings. The ambiance is perfect, and their Chai Latte is simply divine. A true hidden gem!",
+                    author: "Bob The Builder",
+                    role: "Architect",
+                    image: "https://via.placeholder.com/60/4682B4/FFFFFF?text=B" // Placeholder for another image
+                }
+            ];
+
+            let currentFeedbackIndex = 0;
+            const feedbackTextElement = document.querySelector('.feedback-content p.italic');
+            const authorNameElement = document.querySelector('.author-info p.font-bold');
+            const authorRoleElement = document.querySelector('.author-info p.text-sm'); // New element for role
+            const authorImageElement = document.querySelector('.author-info img');
+            const prevArrow = document.querySelector('.feedback-section .fa-arrow-left');
+            const nextArrow = document.querySelector('.feedback-section .fa-arrow-right');
+
+            function updateFeedback() {
+                if (feedbackItems.length === 0) return;
+                const feedback = feedbackItems[currentFeedbackIndex];
+                feedbackTextElement.textContent = feedback.quote;
+                authorNameElement.textContent = feedback.author;
+                authorRoleElement.textContent = feedback.role; // Update role
+                authorImageElement.src = feedback.image;
+            }
+
+            if (prevArrow && nextArrow) {
+                prevArrow.addEventListener('click', () => {
+                    currentFeedbackIndex = (currentFeedbackIndex - 1 + feedbackItems.length) % feedbackItems.length;
+                    updateFeedback();
+                });
+
+                nextArrow.addEventListener('click', () => {
+                    currentFeedbackIndex = (currentFeedbackIndex + 1) % feedbackItems.length;
+                    updateFeedback();
+                });
+                updateFeedback(); // Initialize with the first feedback item on load
+            }
+            */
+        });
+    </script>
+</body>
+
+</html>
